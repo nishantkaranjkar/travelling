@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title></title>
+		<style>
+			.head{
+				width:100%;
+				padding:15px;
+			}
+			.tab1{
+				max-width:800px;
+				width:100%;
+				height:500px;
+				border-collapse:collapse;
+				
+				
+			}
+			td{
+				border:1px solid;
+				border-collapse:collapse;
+				
+				
+			}
+			#s1{
+				max-width:885px;
+				width:100%;
+				height:80px;
+				font-size:35px;
+				
+				
+				
+			}
+			.buttons{
+				width:100%;
+				height:120px;
+				font-size:35px;
+			}
+			.tr1{
+				background-color:lightgray;
+				width:100%;
+			}
+			#equal{
+				background-color:green;
+			}
+		</style>
+</head>
+<body>
+	<table class="tab1" align="center">
+	<tr class="tr1">
+		<td colspan="4" class="head"><input type="text" value="0" id="s1"></td>
+	</tr>
+	<tr class="tr2">
+		<td><input class="buttons" type="button" id="int1" onclick="getval('1')" value="1"></td>
+		<td><input class="buttons" type="button" id="int2" onclick="getval('2')" value="2"></td>
+		<td><input class="buttons" type="button" id="int3" onclick="getval('3')" value="3"></td>
+		<td><input class="buttons" type="button" id="add"  onclick="getval('+')"    value="+"></td>
+	</tr>
+	<tr class="tr2">
+		<td><input class="buttons" type="button" id="int4" onclick="getval('4')" value="4"></td>
+		<td><input class="buttons" type="button" id="int5" onclick="getval('5')" value="5"></td>
+		<td><input class="buttons" type="button" id="int6" onclick="getval('6')" value="6"></td>
+		<td><input class="buttons" type="button" id="sub"  onclick="sub('-')" value="-"></td>
+	</tr>
+	<tr class="tr2">
+		<td><input class="buttons" type="button" id="int7" onclick="getval('7')" value="7"></td>
+		<td><input class="buttons" type="button" id="int8" onclick="getval('8')" value="8"></td>
+		<td><input class="buttons" type="button" id="int9" onclick="getval('9')" value="9"></td>
+		<td><input class="buttons" type="button" id="mul" onclick="getval('*')" value="x"></td>
+	</tr>
+	<tr class="t2">
+		<td><input class="buttons" type="button" id="int0" onclick="getval('0')" value="0"></td>
+		<td><input class="buttons" type="button" id="clear" onclick="Clear()" value="C"></td>
+		<td><input class="buttons" type="button" id="equal" onclick="ans()" value="="></td>
+		<td><input class="buttons" type="button" id="div" onclick="detval('/')" value="/"></td>
+	</tr>
+	</table>
+	<script>
+		
+		var myinput=document.getElementById("s1");
+		function getval(num)
+		{
+			if(myinput.value==0)
+			{
+				myinput.value=num;
+			}
+			else
+			{
+				myinput.value+=num;
+			}
+		}
+		function ans()
+		{
+			myinput.value=eval(myinput.value);
+		}
+		
+		
+		function Clear()
+		{
+			myinput.value=0;
+            }
+		
+	</script>
+<body> 
+
+</html>
